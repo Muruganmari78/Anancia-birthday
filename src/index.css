@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Playfair+Display&family=Caveat&display=swap');
+
+/* ===== BASE ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  color: #3a3a3a;
+  margin: 0;
+}
+
+section,
+footer {
+  margin: 0;
+}
+
+/* ===== HERO (FULL SCREEN – ATTENTION SECTION) ===== */
+.hero-section {
+  min-height: 100vh;
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-family: 'Playfair Display';
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.hero-sub {
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+/* ===== COUNTDOWN (FULL SCREEN) ===== */
+.countdown-section {
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.timer span {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* ===== WISH WALL (CONTENT – NO BIG GAP) ===== */
+.wish-wall {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.wish-wall p {
+  max-width: 600px;
+  margin: 20px auto;
+  line-height: 1.7;
+}
+
+/* ===== LITTLE THINGS (CONTENT) ===== */
+.little-things {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.little-things ul {
+  list-style: none;
+  padding: 0;
+}
+
+.little-things li {
+  margin: 14px 0;
+  font-size: 1.1rem;
+}
+
+/* ===== WISH GRID (CONTENT) ===== */
+.wish-grid {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 700px;
+  margin: 30px auto 0;
+}
+
+.wish-card {
+  background: rgba(255,255,255,0.3);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* ===== EMOTIONAL NOTE (CONTENT – HANDWRITTEN) ===== */
+.emotional-section {
+  font-family: 'Caveat';
+  font-size: 1.6rem;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.emotional-section p {
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+/* ===== MYSTERY / SURPRISE (FULL SCREEN) ===== */
+.mystery-section {
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.locked-box {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.unlocked-box {
+  animation: pop 0.6s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* ===== FINAL SECTION ===== */
+.final-section {
+  min-height: 80vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* ===== GATE / PROMISE BOX (FIXED CENTER ISSUE) ===== */
+.gate-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gate-box {
+  background: rgba(255,255,255,0.25);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 420px;
+  width: 90%;
+}
+
+/* ===== BUTTON ===== */
+.btn-pink {
+  background: #ff6fae;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+/* ===== EFFECTS ===== */
+.fade-in {
+  animation: fade 1.5s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.typing-text {
+  font-family: 'Caveat';
+  font-size: 1.6rem;
+}
+/* ===== LAYOUT RESET ===== */
+section,
+footer {
+  margin: 0;
+}
+
+/* ===== FULL SCREEN ONLY WHERE NEEDED ===== */
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* ===== NORMAL CONTENT SECTIONS (NO GAPS) ===== */
+.countdown-section,
+.wish-wall,
+.little-things,
+.wish-grid,
+.emotional-section,
+.mystery-section,
+.final-section {
+  min-height: auto;
+  padding: 50px 20px;   /* THIS IS THE MAGIC NUMBER */
+  text-align: center;
+}
+
+/* ===== TEXT WIDTH CONTROL ===== */
+p {
+  max-width: 600px;
+  margin: 16px auto;
+  line-height: 1.7;
+}
+
+/* ===== REMOVE EXTRA HEADING SPACE ===== */
+h1, h2, h3 {
+  margin: 0 0 14px;
+}
+/* ===== FINAL GATE FIX ===== */
+.gate-section {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+}
+
+.gate-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background: rgba(255,255,255,0.25);
+  padding: 40px;
+  border-radius: 20px;
+
+  max-width: 420px;
+  width: 90%;
+}
+
+.gate-box h2 {
+  margin-bottom: 16px;
+}
+
+.gate-box p {
+  margin-bottom: 24px;
+}
